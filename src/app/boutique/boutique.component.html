@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="cardContainer">
+  <img
+    src="https://static.fnac-static.com/multimedia/Images/FR/NR/c2/f3/80/8451010/1540-1/tsp20170426132909/Booster-Pokemon-SL02-Lune-et-Soleil.jpg"
+    (click)="getPokemonBooster()"
+  />
+  <div class="cardListContainer">
+    <div *ngFor="let pokemon of boosters; let index = index">
+      <span>{{ index }}</span>
+      <button click="addDeck(index)" type="button">
+        <app-pokemon [pokemon]="pokemon"> </app-pokemon>
+      </button>
+      <button (click)="addDeck(index)" type="button" class="btn btn-secondary">
+        deck
+      </button>
+      <button
+        (click)="sellPokemon(index)"
+        type="button"
+        class="btn btn-secondary"
+      >
+        vendre
+      </button>
+    </div>
+  </div>
+</div>

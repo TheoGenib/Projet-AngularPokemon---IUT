@@ -1,0 +1,11 @@
+<p>home works!</p>
+
+<img
+  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Z4xBquzuILwyL_7DFau8gwHGFpd4VjrAvIqUSuhtzG_cI4UPKhrzLog0k30aSH1Q-Qk&usqp=CAU"
+  alt="pikachu"
+/>
+<h1>Bienvenue</h1>
+<p>Login Name</p>
+<input matInput [formControl]="form.controls.login" type="text" placeholder="Name" />
+<button type="submit" (click)="setDeck()" routerLink="/deck" [disabled]='!form.valid'>GO!</button>
+<router-outlet></router-outlet>

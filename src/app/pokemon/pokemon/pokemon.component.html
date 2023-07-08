@@ -1,0 +1,11 @@
+<p>{{ pokemon.name }}</p>
+<p>{{ pokemon.type }}</p>
+<figure>
+  <img [src]="getPokemonImageUrl()" />
+</figure>
+<ng-container *ngIf="pokemon.stats">
+  <p>PV: {{ pokemon?.stats.hp }}</p>
+  <p>Défense: {{ pokemon?.stats.defense }}</p>
+  <p>Attaque: {{ pokemon?.stats.attack }}</p>
+  <p>Vitesse: {{ pokemon?.stats.speed }}</p>
+</ng-container>

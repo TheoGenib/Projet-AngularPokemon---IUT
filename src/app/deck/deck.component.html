@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<form>
+  <div class="searchContainer">
+  <mat-form-field class="example-full-width">
+
+    <input matInput [formControl]="form.controls.searchLabel">
+  </mat-form-field>
+
+  <mat-form-field>
+  <mat-label>Type</mat-label>
+  <mat-select [formControl]="form.controls.searchType">
+  <mat-option>None</mat-option>
+    <mat-option *ngFor="let type of types" [value]="type">
+      {{type}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+</form>
+<div class="cardContainer">
+  <div class="cardListContainer">
+    <app-pokemon *ngFor="let pokemon of deckFiltered" [pokemon]="pokemon">
+    </app-pokemon>
+  </div>
+</div>

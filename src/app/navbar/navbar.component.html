@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light justify-content-between">
+  <img
+    routerLink="/"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/2560px-International_Pok%C3%A9mon_logo.svg.png"
+    alt="logo"
+    style="width:200px"
+  />
+  <br />
+  <a routerLink="/deck"> Deck</a>
+  <br />
+  <a routerLink="/boutique">Boutique</a>
+  <span >Solde : {{ user.coins }} PK</span>
+  <button (click)= 'deleteLocalStorage()'><a routerLink="/">Delete and Logout</a></button>
+  <p>Bonjour {{userName}}</p>
+</nav>

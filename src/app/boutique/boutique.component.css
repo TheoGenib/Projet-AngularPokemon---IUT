@@ -1,0 +1,27 @@
+.cardContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.cardListContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+app-pokemon {
+  display: inline-block;
+  height: 22rem;
+  width: 10rem;
+  border: 1px solid rgba(22, 20, 20, 0.374);
+  box-shadow: 8px 8px 4px #aaa;
+  margin: 10px;
+  padding: 5px;
+}
